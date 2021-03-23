@@ -71,3 +71,4 @@ print(E)                #but that would not help us get rid of the floating poin
 #Answer= No. We can transpose D to make the multication possible
 D=D.transpose()
 print(np.dot(D,E))
+#
