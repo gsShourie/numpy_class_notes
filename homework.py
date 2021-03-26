@@ -26,7 +26,10 @@ print(B)
 #        [ 0.,  1.,  0.],
 #        [-1.,  5.,  0.],
 #        [-1.,  0.,  5.]]
-C=np.array([[1,0,0],[0,1,0],[-1,5,0],[-1,0,5]])
+#C=np.array([[1,0,0],[0,1,0],[-1,5,0],[-1,0,5]])
+C=np.eye(3)
+C[2,:]=5*B[1,:] - B[0,:]
+C=np.concatenate((C,[5*B[2,:]- B[0,:]]),axis=0)
 C=C.astype(float)
 print(C)
 
@@ -71,4 +74,3 @@ print(E)                #but that would not help us get rid of the floating poin
 #Answer= No. We can transpose D to make the multication possible
 D=D.transpose()
 print(np.dot(D,E))
-#
